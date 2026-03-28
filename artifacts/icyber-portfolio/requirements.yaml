@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "For elegant page transitions and scroll-reveals"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For Zod schema validation integration"
+
+images:
+  - path: "artifacts/icyber-portfolio/public/images/profile-portrait.png"
+    description: "Professional, elegant studio portrait of a confident web developer and cybersecurity expert. Dark moody lighting with subtle warm amber and deep red rim lights. High quality, photorealistic."
+    aspect_ratio: "3:4"
+
+notes:
+  - Mocking contact form submission since there is no backend API defined.
+  - Relying on @assets/logo.png which was provided by the user.

@@ -1,0 +1,99 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Cambria",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#E6870B",
+    "accent": "#CA4D4D",
+    "background": "#FFFFFF",
+    "textPrimary": "#CA4D4D",
+    "link": "#CA4D4D"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Cambria",
+      "heading": "Cambria"
+    },
+    "fontStacks": {
+      "heading": [
+        "Cambria",
+        "Cochin",
+        "Georgia",
+        "Times",
+        "Times New Roman",
+        "serif"
+      ],
+      "body": [
+        "Cambria",
+        "Cochin",
+        "Georgia",
+        "Times",
+        "Times New Roman",
+        "serif"
+      ],
+      "paragraph": [
+        "Cambria",
+        "Cochin",
+        "Georgia",
+        "Times",
+        "Times New Roman",
+        "serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "32px",
+      "h2": "24px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {},
+  "images": {
+    "logo": "File saved at: attached_assets/logo.png",
+    "favicon": null,
+    "ogImage": null
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, medium-sized, and matches the brand name 'ICYBER' from the URL and page title. It is the most prominent logo available.",
+    "confidence": 0.85,
+    "source": "llm"
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "technology professionals"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0.9,
+    "overall": 0.45
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, medium-sized, and matches the brand name 'ICYBER' from the URL and page title. It is the most prominent logo available.",
+        "confidence": 0.85
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": false,
+      "llmSucceeded": false
+    }
+  }
+}
