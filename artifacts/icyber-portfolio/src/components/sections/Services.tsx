@@ -44,7 +44,7 @@ export function Services() {
   };
 
   return (
-    <section className="py-24 relative bg-black">
+    <section className="py-12 sm:py-16 lg:py-24 relative bg-black">
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       
@@ -83,7 +83,7 @@ export function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {services.map((service) => (
             <motion.div 

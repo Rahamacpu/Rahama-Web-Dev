@@ -55,13 +55,13 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-2xl font-medium transition-all duration-200 hover:text-primary relative group",
+                  "text-base lg:text-xl xl:text-2xl font-medium transition-all duration-200 hover:text-primary relative group whitespace-nowrap",
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >

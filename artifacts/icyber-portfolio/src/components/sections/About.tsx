@@ -9,9 +9,9 @@ export function About() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-background">
+    <section className="py-12 sm:py-16 lg:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Text Content */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
