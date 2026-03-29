@@ -99,6 +99,10 @@
   .text-glow {
     text-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
   }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
+  }
   
   .glass-panel {
     @apply bg-background/70 backdrop-blur-lg border border-white/5 shadow-2xl shadow-black/50;

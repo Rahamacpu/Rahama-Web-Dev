@@ -31,7 +31,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-foreground leading-[1.1] mb-6">
-            Hello, i'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-glow">Rahama</span>
+            Hello, i'm <span className="text-cyan-400 text-glow-cyan">Rahama</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-10 leading-relaxed max-w-xl">
