@@ -53,8 +53,8 @@
   --popover-foreground: 0 0% 97%;
   --popover-border: 240 5% 15%;
 
-  /* Primary Orange #E6870B */
-  --primary: 34 91% 47%;
+  /* Primary Red #CA4D4D */
+  --primary: 0 54% 55%;
   --primary-foreground: 0 0% 100%;
 
   /* Secondary/Muted */
@@ -64,8 +64,8 @@
   --muted: 240 5% 15%;
   --muted-foreground: 240 5% 65%;
 
-  /* Accent Red #CA4D4D */
-  --accent: 0 54% 55%;
+  /* Accent Deep Red */
+  --accent: 0 65% 42%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
@@ -73,7 +73,7 @@
 
   --border: 240 5% 15%;
   --input: 240 5% 15%;
-  --ring: 34 91% 47%;
+  --ring: 0 54% 55%;
 
   --radius: 0.75rem;
 }
