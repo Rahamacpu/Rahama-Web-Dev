@@ -29,7 +29,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.1] mb-4 sm:mb-6">
-            Hello, i'm <span className="text-cyan-400 text-glow-cyan">Rahama</span>
+            Hello, i'm <span className="text-[#00FFFF] text-glow-cyan">Rahama</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-light mb-6 sm:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -39,7 +39,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <Link 
               href="/contact"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-white shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_35px_rgba(34,197,94,0.55)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold bg-[#00FFFF] text-black shadow-[0_0_20px_rgba(0,255,255,0.35)] hover:shadow-[0_0_35px_rgba(0,255,255,0.6)] hover:bg-[#33FFFF] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               Let's Talk
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
