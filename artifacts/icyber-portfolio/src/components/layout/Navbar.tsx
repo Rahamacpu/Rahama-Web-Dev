@@ -61,7 +61,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-all duration-200 hover:text-primary relative group",
+                  "text-2xl font-medium transition-all duration-200 hover:text-primary relative group",
                   location === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >
