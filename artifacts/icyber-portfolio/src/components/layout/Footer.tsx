@@ -74,7 +74,7 @@ export function Footer() {
           {socialIcons.map((item, idx) => (
             <button 
               key={idx}
-              className="p-3 rounded-full bg-white/5 text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(230,135,11,0.4)] transition-all duration-300"
+              className="p-3 rounded-full bg-white/5 text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"
               aria-label={item.label}
             >
               <item.icon className="w-5 h-5" />

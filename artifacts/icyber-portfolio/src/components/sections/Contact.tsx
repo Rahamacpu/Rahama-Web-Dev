@@ -168,7 +168,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={contactMutation.isPending}
-                    className="w-full md:w-auto px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-white shadow-[0_0_20px_rgba(230,135,11,0.2)] hover:shadow-[0_0_30px_rgba(230,135,11,0.4)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none mt-8"
+                    className="w-full md:w-auto px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-white shadow-[0_0_20px_rgba(34,197,94,0.25)] hover:shadow-[0_0_35px_rgba(34,197,94,0.5)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none mt-8"
                   >
                     {contactMutation.isPending ? "Sending..." : "Send Message"}
                     <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

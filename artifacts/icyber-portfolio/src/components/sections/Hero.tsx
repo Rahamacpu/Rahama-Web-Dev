@@ -26,7 +26,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 max-w-2xl"
         >
-          <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-medium text-sm mb-6 shadow-[0_0_15px_rgba(230,135,11,0.15)]">
+          <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-medium text-sm mb-6 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
             Career path: Cyber Security Web & App Development
           </div>
           
@@ -41,7 +41,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Link 
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-white shadow-[0_0_20px_rgba(230,135,11,0.3)] hover:shadow-[0_0_30px_rgba(230,135,11,0.5)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-white shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_35px_rgba(34,197,94,0.55)] hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group"
             >
               Let's Talk
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
