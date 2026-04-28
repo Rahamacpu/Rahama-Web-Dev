@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ChevronRight } from "lucide-react";
+import avatarImg from "@assets/fotis-fotopoulos-SyvsTmuuZyM-unsplash_1777393037241.jpg";
 
 export function Hero() {
   return (
@@ -67,7 +68,7 @@ export function Hero() {
             
             <div className="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 lg:w-80 lg:h-[420px] rounded-t-full rounded-b-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl glass-panel group">
               <img 
-                src={`${import.meta.env.BASE_URL}images/profile-portrait.png`}
+                src={avatarImg}
                 alt="Rahama - Web Developer" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
