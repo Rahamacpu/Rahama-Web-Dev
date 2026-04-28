@@ -17,7 +17,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialIcons = [
-    { icon: Phone, label: "Phone", href: null },
+    { icon: Phone, label: "Phone", href: "tel:+447774136787" },
     { icon: Mail, label: "Email", href: "mailto:hello@icyber.tech" },
     { icon: Globe, label: "Website", href: null },
     { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@ICYBERTV" },

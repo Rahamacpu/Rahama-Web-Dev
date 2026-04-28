@@ -98,7 +98,7 @@ export function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground">Phone</p>
-                      <p className="text-muted-foreground mt-1">Available 24/7</p>
+                      <a href="tel:+447774136787" className="text-muted-foreground mt-1 block hover:text-primary transition-colors">+44 7774 136787</a>
                     </div>
                   </div>
                 </div>
