@@ -8,7 +8,8 @@ import {
   Camera, 
   Wifi, 
   Smile, 
-  Search 
+  Search,
+  Youtube
 } from "lucide-react";
 import logoImg from "@assets/logo.png";
 
@@ -16,15 +17,16 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialIcons = [
-    { icon: Phone, label: "Phone" },
-    { icon: Mail, label: "Email" },
-    { icon: Globe, label: "Website" },
-    { icon: Bell, label: "Notifications" },
-    { icon: MessageSquare, label: "Chat" },
-    { icon: Camera, label: "Instagram" },
-    { icon: Wifi, label: "Connect" },
-    { icon: Smile, label: "Community" },
-    { icon: Search, label: "Search" },
+    { icon: Phone, label: "Phone", href: null },
+    { icon: Mail, label: "Email", href: "mailto:hello@icyber.tech" },
+    { icon: Globe, label: "Website", href: null },
+    { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@ICYBERTV" },
+    { icon: Bell, label: "Notifications", href: null },
+    { icon: MessageSquare, label: "Chat", href: null },
+    { icon: Camera, label: "Instagram", href: null },
+    { icon: Wifi, label: "Connect", href: null },
+    { icon: Smile, label: "Community", href: null },
+    { icon: Search, label: "Search", href: null },
   ];
 
   return (
@@ -71,15 +73,29 @@ export function Footer() {
 
         {/* Social Icons Row */}
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 py-8 border-y border-white/10 mb-8">
-          {socialIcons.map((item, idx) => (
-            <button 
-              key={idx}
-              className="p-3 rounded-full bg-white/5 text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"
-              aria-label={item.label}
-            >
-              <item.icon className="w-5 h-5" />
-            </button>
-          ))}
+          {socialIcons.map((item, idx) => {
+            const className = "p-3 rounded-full bg-white/5 text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300 inline-flex";
+            return item.href ? (
+              <a
+                key={idx}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+                aria-label={item.label}
+              >
+                <item.icon className="w-5 h-5" />
+              </a>
+            ) : (
+              <button 
+                key={idx}
+                className={className}
+                aria-label={item.label}
+              >
+                <item.icon className="w-5 h-5" />
+              </button>
+            );
+          })}
         </div>
 
         <div className="text-center text-sm text-muted-foreground flex flex-col md:flex-row items-center justify-between">
