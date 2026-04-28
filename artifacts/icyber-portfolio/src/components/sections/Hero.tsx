@@ -25,7 +25,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 max-w-2xl text-center lg:text-left"
         >
-          <div className="inline-block px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary font-medium text-xs sm:text-sm mb-4 sm:mb-6 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
+          <div className="inline-block px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-white font-medium text-xs sm:text-sm mb-4 sm:mb-6 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
             Career path: Cyber Security Web & App Development
           </div>
           
