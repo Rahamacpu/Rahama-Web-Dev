@@ -18,7 +18,7 @@ export function Footer() {
   
   const socialIcons = [
     { icon: Phone, label: "Phone", href: "tel:+447774136787" },
-    { icon: Mail, label: "Email", href: "mailto:hello@icyber.tech" },
+    { icon: Mail, label: "Email", href: "mailto:rahamamusa1222@gmail.com" },
     { icon: Globe, label: "Website", href: null },
     { icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@ICYBERTV" },
     { icon: Bell, label: "Notifications", href: null },
