@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, FormEvent } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,7 +15,44 @@ const NAV_LINKS = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [location] = useLocation();
+  const searchRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Close search when clicking outside
+  useEffect(() => {
+    if (!isSearchOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isSearchOpen]);
+
+  // Focus input when search opens
+  useEffect(() => {
+    if (isSearchOpen) {
+      setTimeout(() => searchInputRef.current?.focus(), 50);
+    }
+  }, [isSearchOpen]);
+
+  const handleSearchSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const query = searchQuery.trim();
+    if (!query) return;
+    window.open(
+      `https://www.google.com/search?q=${encodeURIComponent(query)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+    setSearchQuery("");
+    setIsSearchOpen(false);
+    setIsMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,10 +114,43 @@ export function Navbar() {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <button className="p-2 text-muted-foreground hover:text-primary transition-colors rounded-full hover:bg-white/5">
+          <div className="hidden md:flex items-center gap-4 relative" ref={searchRef}>
+            <button
+              onClick={() => setIsSearchOpen((s) => !s)}
+              className="p-2 text-muted-foreground hover:text-primary transition-colors rounded-full hover:bg-white/5"
+              aria-label="Search the web"
+            >
               <Search className="w-5 h-5" />
             </button>
+
+            <AnimatePresence>
+              {isSearchOpen && (
+                <motion.form
+                  initial={{ opacity: 0, y: -8, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -8, scale: 0.95 }}
+                  transition={{ duration: 0.15 }}
+                  onSubmit={handleSearchSubmit}
+                  className="absolute right-0 top-full mt-3 w-80 glass-panel rounded-xl p-2 flex items-center gap-2 shadow-2xl border border-white/10"
+                >
+                  <Search className="w-4 h-4 text-muted-foreground ml-2 flex-shrink-0" />
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search the web..."
+                    className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none px-1 py-1.5"
+                  />
+                  <button
+                    type="submit"
+                    className="px-3 py-1.5 rounded-lg bg-[#00FFFF] text-black text-xs font-semibold hover:bg-[#33FFFF] transition-colors"
+                  >
+                    Go
+                  </button>
+                </motion.form>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -118,10 +188,22 @@ export function Navbar() {
               ))}
             </nav>
             <div className="mt-8 pt-8 border-t border-border">
-              <button className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Search className="w-5 h-5" />
-                <span className="font-medium">Search</span>
-              </button>
+              <form onSubmit={handleSearchSubmit} className="flex items-center gap-2 glass-panel rounded-xl p-2 border border-white/10">
+                <Search className="w-4 h-4 text-muted-foreground ml-2 flex-shrink-0" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search the web..."
+                  className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none px-1 py-1.5"
+                />
+                <button
+                  type="submit"
+                  className="px-3 py-1.5 rounded-lg bg-[#00FFFF] text-black text-xs font-semibold hover:bg-[#33FFFF] transition-colors"
+                >
+                  Go
+                </button>
+              </form>
             </div>
           </motion.div>
         )}
