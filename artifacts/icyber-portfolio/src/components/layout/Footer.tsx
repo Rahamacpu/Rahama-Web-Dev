@@ -11,7 +11,7 @@ import {
   Search,
   Youtube
 } from "lucide-react";
-import logoImg from "@assets/logo.png";
+import logoImg from "@assets/Black_and_White_Modern_Personal_Logo(2)_1777405393996.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

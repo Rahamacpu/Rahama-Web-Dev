@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import logoImg from "@assets/logo.png";
+import logoImg from "@assets/Black_and_White_Modern_Personal_Logo(2)_1777405393996.png";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
