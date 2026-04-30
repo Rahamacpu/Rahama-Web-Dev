@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "icyber.tech Portfolio"
+title = "icyber.tech"
 version = "1.0.0"
 id = "artifacts/icyber-portfolio"
 router = "path"

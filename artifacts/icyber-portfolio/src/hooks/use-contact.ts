@@ -20,7 +20,7 @@ export function useSubmitContact() {
       formData.append("message", data.message);
       formData.append("access_key", ACCESS_KEY);
       formData.append("subject", `New message from ${data.name} via icyber.tech`);
-      formData.append("from_name", "icyber.tech Portfolio");
+      formData.append("from_name", "icyber.tech");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
