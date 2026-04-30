@@ -21,22 +21,20 @@ export function useSubmitContact() {
         );
       }
 
-      const payload = {
-        access_key: accessKey,
-        subject: `New message from ${data.name} via icyber.tech`,
-        from_name: "icyber.tech Portfolio",
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      };
+      const formData = new FormData();
+      formData.append("access_key", accessKey);
+      formData.append("subject", `New message from ${data.name} via icyber.tech`);
+      formData.append("from_name", "icyber.tech Portfolio");
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
 
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       const result = await res.json();
