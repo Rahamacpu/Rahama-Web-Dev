@@ -37,10 +37,10 @@ export function Contact() {
         });
         form.reset();
       },
-      onError: () => {
+      onError: (error: Error) => {
         toast({
           title: "Error",
-          description: "Something went wrong. Please try again.",
+          description: error?.message || "Something went wrong. Please try again.",
           variant: "destructive",
         });
       },
