@@ -9,7 +9,7 @@ export const contactFormSchema = z.object({
 
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
-const TARGET_EMAIL = "tech1718@gmail.com";
+const ACCESS_KEY = "796dcc1e-8f39-4b47-b391-2ae7bea9fd36";
 
 export function useSubmitContact() {
   return useMutation({
@@ -18,37 +18,22 @@ export function useSubmitContact() {
       formData.append("name", data.name);
       formData.append("email", data.email);
       formData.append("message", data.message);
-      formData.append("_subject", `New message from ${data.name} via icyber.tech`);
-      formData.append("_template", "table");
-      formData.append("_captcha", "false");
+      formData.append("access_key", ACCESS_KEY);
+      formData.append("subject", `New message from ${data.name} via icyber.tech`);
+      formData.append("from_name", "icyber.tech Portfolio");
 
-      const res = await fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
         body: formData,
       });
 
-      let result: { success?: string | boolean; message?: string } = {};
-      try {
-        result = await res.json();
-      } catch {
-        // ignore JSON parse errors
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Something went wrong. Please try again.");
       }
 
-      const success =
-        result.success === true ||
-        result.success === "true" ||
-        (res.ok && !result.message);
-
-      if (!res.ok || !success) {
-        throw new Error(
-          result.message || "Failed to send message. Please try again."
-        );
-      }
-
-      return { success: true, message: "Message sent successfully!" };
+      return { success: true, message: "Your message has been sent." };
     },
   });
 }
